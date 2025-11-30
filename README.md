@@ -221,7 +221,7 @@ Cosine EC-NAS significantly improves:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##### 4.2 Forgetting
-Cosine EC-NAS drastically reduces catastrophic forgetting.
+Cosine EC-NAS drastically increase catastrophic forgetting.
 ![WhatsApp Image 2025-11-30 at 15 19 27_da18d1cf](https://github.com/user-attachments/assets/848f0bf5-34be-4565-b547-f0fd467ac6f8)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
