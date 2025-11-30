@@ -210,24 +210,33 @@ These plots allow direct comparison between:
 Cosine EC-NAS significantly improves:
 - After-learn accuracy (+73%)
 ![WhatsApp Image 2025-11-30 at 15 14 40_856223e9](https://github.com/user-attachments/assets/17995620-e88e-4638-9f9b-b34a770929d0)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Final accuracy (+35%)
 ![WhatsApp Image 2025-11-30 at 15 14 40_37065442](https://github.com/user-attachments/assets/2635882d-5d2b-4f3e-ac32-df3917d1651b)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - New neuron per task
 ![WhatsApp Image 2025-11-30 at 15 14 41_d2e84fa1](https://github.com/user-attachments/assets/e3101d07-51a2-49c8-9e04-966793596ce8)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##### 4.2 Forgetting
 Cosine EC-NAS drastically reduces catastrophic forgetting.
 ![WhatsApp Image 2025-11-30 at 15 19 27_da18d1cf](https://github.com/user-attachments/assets/848f0bf5-34be-4565-b547-f0fd467ac6f8)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 KMeans reduces some forgetting but suffers in accuracy.
 ![WhatsApp Image 2025-11-30 at 15 20 57_8f71ee49](https://github.com/user-attachments/assets/f813c5bb-75d6-48ba-93dd-6bf501446798)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##### 4.3 Compute Efficiency
 Cosine EC-NAS reduces:
 - per-task search time by ~37%
 - overall memory + compute footprint
   ![WhatsApp Image 2025-11-30 at 15 14 40_31b0fbaf](https://github.com/user-attachments/assets/c3e47ddc-1a76-47a8-8235-45e3b64f35b6)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##### 4.4 Overall Conclusion
 Cosine-based EC-NAS is superior in both efficiency and stability.
