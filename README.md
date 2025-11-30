@@ -80,6 +80,7 @@ ratio = ratio\_min + sigmoid(ratio\_head(h\_T)) \* ratio\_range
 **Cosine prototype selection was shown to achieve lower computation + lower forgetting**
 
 ### 📁 Repository Structure
+'''  bash
 RL_Project/
 │
 ├── CLEAS-C+KMeans_Proposed.ipynb          # abalation     
@@ -89,6 +90,7 @@ RL_Project/
 ├── checkpoints_proposed/    # Auto-generated proposed method checkpoints
 │
 └── README.md                # This file
+'''
 
 Both notebooks contain both:
 - CLEAS-C baseline
@@ -168,7 +170,6 @@ This notebook implements:
 
 #### 💾 2. Checkpointing (Automatic)
 Each experiment automatically creates:
-'''
     /checkpoints_cleasc/
         actions_t.npy
         states_t.pth
@@ -183,7 +184,6 @@ Each experiment automatically creates:
         ratios_t.npy
         times_t.npy
         progress.json
-'''
 These are used to automatically resume where the notebook left off. It allow notebook to resume mid-experiment even after runtime disconnection.
 
 Resume from checkpoint
@@ -212,21 +212,21 @@ These plots allow direct comparison between:
     Cosine EC-NAS
 
 #### 📈 4. Results Summary
-### 4.1 Accuracy
+##### 4.1 Accuracy
 Cosine EC-NAS significantly improves:
 - After-learn accuracy (+73%)
 - Final accuracy (+35%)
 
-### 4.2 Forgetting
+##### 4.2 Forgetting
 Cosine EC-NAS drastically reduces catastrophic forgetting.
 KMeans reduces some forgetting but suffers in accuracy.
 
-### 4.3 Compute Efficiency
+##### 4.3 Compute Efficiency
 Cosine EC-NAS reduces:
 - per-task search time by ~37%
 - overall memory + compute footprint
 
-### 4.4 Overall Conclusion
+##### 4.4 Overall Conclusion
 Cosine-based EC-NAS is superior in both efficiency and stability.
 KMeans is included only for ablation and interpretability.
 
