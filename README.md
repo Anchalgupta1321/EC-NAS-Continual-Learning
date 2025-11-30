@@ -40,13 +40,14 @@ We improve efficiency by introducing:
 ##### 1️⃣. Representative Coreset Selection
 Rather than training each episode on full task data, we choose small representative subsets per task.
 We implement two coreset extraction mechanisms used during the NAS search.
+
 **1.1 K-Means Coreset (Ablation)**
 - Per-class MiniBatchKMeans clustering
 - Samples chosen from each cluster (centroid + diverse farthest samples)
 - Helps evaluate whether geometric diversity helps reduce forgetting
 - Drawback: slow feature clustering and higher compute
 
-**5.2 Cosine Prototype Coreset (Final method – fastest and better performing)**
+**1.2 Cosine Prototype Coreset (Final method – fastest and better performing)**
 - Computes per-class cosine prototypes
 - Selects samples closest to class prototypes
 - Requires only matrix multiplication → extremely fast
