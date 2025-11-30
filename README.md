@@ -2,13 +2,13 @@
 This repository contains a complete reproduction of the CLEAS-C method (Gao et al., 2022) along with an improved and computationally efficient variant, EC-NAS, which performs Neural Architecture Search (NAS) using only a small, representative subset of training samples selected via reinforcement learning.
 The project is built as part of a university research course in Reinforcement Learning at Vidyashilp University, Bangalore.
 
-### **The codebase supports two modes:** 
+### The codebase supports two modes:
 **CLEAS-C (Paper Baseline)** — Standard architecture search on full training data
 **Proposed EC-NAS** — Architecture + Data-Ratio Joint Optimization
 Coreset selected using Cosine Prototype Selection (final method)
 Also includes K-means clustering coreset implementation for comparison.
 
-## ** 🔍 Project Overview**
+## 🔍 Project Overview
 Continual learning systems must adapt to a sequence of tasks while avoiding catastrophic forgetting.
 The project is implemented in modular components aligned with the CLEAS framework:
 **Dataset & Task Loader** 
@@ -35,9 +35,9 @@ Two versions:
 - `ControllerLSTM` — original CLEAS-C controller
 - `ControllerLSTM_WithRatio` — EC-NAS joint architecture + data ratio controller
 
-### ** 🚀 Our Proposed Method (EC-NAS)**
+###  🚀 Our Proposed Method (EC-NAS)
 We improve efficiency by introducing:
-##### **1️⃣. Representative Coreset Selection**
+##### 1️⃣. Representative Coreset Selection
 Rather than training each episode on full task data, we choose small representative subsets per task.
 We implement two coreset extraction mechanisms used during the NAS search.
 **1.1 K-Means Coreset (Ablation)**
@@ -53,7 +53,7 @@ We implement two coreset extraction mechanisms used during the NAS search.
 - Produces the best accuracy-forgetting tradeoff
 - Reduces search time per task by ~35–40%
 
-##### **2️⃣. Data Ratio Prediction by RL Controller** 
+##### 2️⃣. Data Ratio Prediction by RL Controller
 The controller joint-optimizes:
     architecture actions
     global data ratio
@@ -62,24 +62,24 @@ The controller joint-optimizes:
 Ratio is predicted as:
 ratio = ratio_min + sigmoid(ratio_head(h_T)) * ratio_range
 
-##### **3️⃣. Joint Architecture + Data Optimization**
+##### 3️⃣. Joint Architecture + Data Optimization
 REINFORCE now optimizes for:
 - higher average accuracy on all tasks
 - smaller architectural expansion
 - lower forgetting
 - efficient coreset selection
 
-##### **4️⃣. Improved State Encoding + Layer One-Hot**
+##### 4️⃣. Improved State Encoding + Layer One-Hot
 Each neuron state = one\_hot(action) + layer\_encoding allowing better RL learning signals.
 
-##### **5️⃣. Warm-up \& ratio constraints**
+##### 5️⃣. Warm-up \& ratio constraints
 Task 1 always uses full data (ratio = 1.0).
 For later tasks, ratio is constrained:
 ratio = ratio\_min + sigmoid(ratio\_head(h\_T)) \* ratio\_range
 
 **Cosine prototype selection was shown to achieve lower computation + lower forgetting**
 
-### 📁 **Repository Structure**
+### 📁 Repository Structure
 RL_Project/
 │
 ├── CLEAS-C+KMeans_Proposed.ipynb          # abalation     
@@ -94,7 +94,7 @@ Both notebooks contain both:
 - CLEAS-C baseline
 - Proposed EC-NAS variant
 
-### ⚙️ **Installation & Requirements**
+### ⚙️ Installation & Requirements
 **Step 1** — Clone 
 '''bash
 git clone https://github.com/your_repo_here
