@@ -24,9 +24,9 @@ The CLEAS paper introduces a neuron-level architecture search method using reinf
 - multiple task-specific output heads
 
 However, CLEAS is computationally expensive because:
-✔ It trains a candidate model per episode
-✔ Each episode uses the full dataset
-✔ The paper uses 200 episodes per task (H = 200)
+    ✔ It trains a candidate model per episode
+    ✔ Each episode uses the full dataset
+    ✔ The paper uses 200 episodes per task (H = 200)
 
 This results in ~20 hours of computation for CIFAR-100 even on GPU.
 
@@ -82,15 +82,15 @@ ratio = ratio\_min + sigmoid(ratio\_head(h\_T)) \* ratio\_range
 
 ### 📁 Repository Structure
 '''  bash
-RL_Project/
-│
-├── CLEAS-C+KMeans_Proposed.ipynb          # abalation     
-├── CLEAS-C+Cosine_EC-NAS-Proposed.ipynb   # final results    
-│
-├── checkpoints_cleasc/      # Auto-generated CLEAS-C task checkpoints
-├── checkpoints_proposed/    # Auto-generated proposed method checkpoints
-│
-└── README.md                # This file
+    RL_Project/
+    │
+    ├── CLEAS-C+KMeans_Proposed.ipynb          # abalation     
+    ├── CLEAS-C+Cosine_EC-NAS-Proposed.ipynb   # final results    
+    │
+    ├── checkpoints_cleasc/      # Auto-generated CLEAS-C task checkpoints
+    ├── checkpoints_proposed/    # Auto-generated proposed method checkpoints
+    │
+    └── README.md                # This file
 '''
 
 Both notebooks contain both:
