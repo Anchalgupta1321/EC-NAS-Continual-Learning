@@ -86,9 +86,6 @@ ratio = ratio\_min + sigmoid(ratio\_head(h\_T)) \* ratio\_range
     ├── CLEAS-C+KMeans_Proposed.ipynb          # abalation     
     ├── CLEAS-C+Cosine_EC-NAS-Proposed.ipynb   # final results    
     │
-    ├── checkpoints_cleasc/      # Auto-generated CLEAS-C task checkpoints
-    ├── checkpoints_proposed/    # Auto-generated proposed method checkpoints
-    │
     └── README.md                # This file
 
 Both notebooks contain both:
@@ -166,6 +163,7 @@ This notebook implements:
 
 #### 💾 2. Checkpointing (Automatic)
 Each experiment automatically creates:
+
     /checkpoints_cleasc/
         actions_t.npy
         states_t.pth
